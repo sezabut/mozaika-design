@@ -1,3 +1,5 @@
+![Mozaika Design — decode a real product's design system, then build to it](assets/banner.png)
+
 # Mozaika Design
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-111111.svg)](LICENSE)
@@ -79,5 +81,4 @@ Tools: **`get_design_system`**, `search_screens` (whole screens or `kind="sectio
 
 ## License
 
-MIT © 2026 Novera LLC — see [LICENSE](LICENSE). Methodology partly derived from
-[referodesign/refero_skill](https://github.com/referodesign/refero_skill) (MIT), with attribution retained.
+MIT © 2026 Novera LLC — see [LICENSE](LICENSE).
