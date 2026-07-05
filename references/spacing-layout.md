@@ -5,7 +5,8 @@ Space is the cheapest way to look expensive. Rhythm and alignment separate desig
 ## Spacing
 - Use one consistent scale (4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128). Don't freehand pixel values.
 - **Generous section spacing.** Cramped vertical rhythm reads as a template. Big, confident gaps between
-  major sections (96–160px on desktop) signal intent.
+  major sections (96–160px on desktop) signal intent. Measured example: Linear's landing runs a 128px
+  section rhythm.
 - Group by proximity: related things close, unrelated things far. Whitespace is structure, not filler.
 
 ## Grid & alignment
