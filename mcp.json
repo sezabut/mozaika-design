@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mozaika": {
+      "url": "https://mozaika.design/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MOZAIKA_API_KEY}"
+      }
+    }
+  }
+}
