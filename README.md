@@ -17,8 +17,9 @@ every visible decision traces to a real product or a craft rule, never to the mo
 default. Defaults are where slop comes from.
 
 It pairs with the [Mozaika MCP](https://mozaika.design/connect), which serves design
-systems **measured from the live DOM** — measured, not hallucinated. The MCP has a real
-free tier (no card). The method itself needs no account at all.
+systems **measured from the live DOM** — measured, not hallucinated. The corpus behind
+it today: **588 real products, 3,873 decoded sections, 548 measured design systems**.
+The MCP has a real free tier (no card). The method itself needs no account at all.
 
 ## Install
 
@@ -75,8 +76,8 @@ be added to `assets/receipts/` and nothing is described here that we didn't run.
 - **The measurements are real.** The corpus behind the MCP carries type measured from the
   live DOM via computed-style probes: Linear's hero is 64px at weight **510**, tracking
   **−1.41px**, on a 300/400/510/590 weight ladder with a 128px section rhythm. Vercel
-  tracks its hero at **−3.84px**. Stripe's display weight is **300**. Across 339 measured
-  products the weight ladders run 200→900 — which is exactly why an agent's "Inter
+  tracks its hero at **−3.84px**. Stripe's display weight is **300**. Across 548 measured design
+  systems the weight ladders run 200→900 — which is exactly why an agent's "Inter
   400/600" habit reads as slop.
 
 Honest caveats: the loop, the judging, and the fixes are ours; treat this as a documented
