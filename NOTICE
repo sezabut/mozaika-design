@@ -1,0 +1,13 @@
+Mozaika Design — attribution notices
+====================================
+
+This skill is released under the MIT License (see LICENSE).
+
+Portions of this skill's methodology are derived from referodesign/refero_skill,
+MIT License, Copyright (c) Refero. That copyright notice and the MIT permission
+notice are retained in LICENSE as the MIT License requires.
+
+This file exists so LICENSE can stay a verbatim MIT text: tooling that classifies
+licences (GitHub's licensee among them) reports "NOASSERTION" when explanatory
+prose is interleaved with the licence body, which makes the project look
+unlicensed to anyone scanning it.

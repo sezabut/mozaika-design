@@ -18,7 +18,7 @@ default. Defaults are where slop comes from.
 
 It pairs with the [Mozaika MCP](https://mozaika.design/connect), which serves design
 systems **measured from the live DOM** — measured, not hallucinated. The corpus behind
-it today: **588 real products, 3,873 decoded sections, 548 measured design systems**.
+it today: **486 real products, 3,765 decoded sections, 550 measured design systems**.
 The MCP has a real free tier (no card). The method itself needs no account at all.
 
 ## Install
@@ -40,6 +40,61 @@ cp -r mozaika-design your-project/.claude/skills/mozaika-design
 Craft rules and the method load immediately. No account, no key, no telemetry — it is a
 folder of markdown.
 
+## See it: two runs, same prompt
+
+Run on **17 October 2026**. Same prompt, same model, same flags, **one take each**. Every
+agent was alone in a directory with one file — or none — and could not browse or see the
+target. *canvas* is the measured background colour and its distance from the real
+section's; *accent* is the share of pixels in the product's own accent colour, measured the
+same way on the real section so its figure sits in the table too. Typography, layout
+likeness and motion are **not** measured — that is what the screenshots are for.
+
+### PostHog — a product the model already knows
+
+| in the room | canvas | accent |
+|---|---|---|
+| nothing | `#EEEFE9` — off by 76 | 0.00% |
+| a free community `DESIGN.md` | `#EEEFE9` — off by 76 | 0.09% |
+| **this skill's `kit.json`** | **`#E1D7C2` — exact** | 0.49% |
+| *the real section* | *`#E1D7C2`* | *0.35%* |
+
+With nothing to read, the agent still knew PostHog: off-white canvas, orange button, even a
+hand-drawn arrow. It never produced the colour PostHog actually uses on this section. The
+free file is good — 690 lines, the real amber — but it states the canvas is `#eeefe9`,
+which is exactly what the agent believed without it.
+
+![No reference — just the prompt](assets/receipts/posthog-01-nothing.jpg)
+![A free community DESIGN.md](assets/receipts/posthog-02-free-designmd.jpg)
+![The decoded section spec](assets/receipts/posthog-03-mozaika.jpg)
+![PostHog's real pricing section](assets/receipts/posthog-04-real.jpg)
+
+The decoded run also brought the things only a *section* spec knows: the retro product box,
+the Free / Pay-as-you-go selector, the row of per-unit free-tier limits.
+
+### PlanetScale — one it does not
+
+No free `DESIGN.md` exists for this product, so there are two arms instead of three.
+
+| in the room | canvas | scheme | accent |
+|---|---|---|---|
+| nothing | `#000000` — off by 750 | **dark — the real one is light** | 0.00% |
+| **this skill's `kit.json`** | **`#FAFAFA` — exact** | light — matches | 0.28% |
+| *the real section* | *`#FAFAFA`* | *light* | *0.21%* |
+
+It did not get a shade wrong. It built a dark three-card pricing page for a section that is
+light and is not a card grid at all — it is a configurator. The decoded run built the
+configurator: region picker, database engine, cluster type, storage sliders, running
+monthly total pinned to the bottom.
+
+![No reference — just the prompt](assets/receipts/planetscale-01-nothing.jpg)
+![The decoded section spec](assets/receipts/planetscale-02-mozaika.jpg)
+![PlanetScale's real pricing section](assets/receipts/planetscale-03-real.jpg)
+
+That gap is the honest shape of this: your agent remembers famous products and approximates
+them. It does not know *your* target, and it does not know what any particular section is
+made of. Full write-up, including what the instrument cannot see:
+[mozaika.design/proof](https://mozaika.design/proof).
+
 ## The method
 
 1. **Frame** — Subject · Audience · Job · Concept · **Signature**, in one sentence, before any code.
@@ -55,12 +110,14 @@ Full method: [`SKILL.md`](SKILL.md). A complete worked run:
 ## Receipts
 
 This method wasn't written as advice; it is how we test our own product. The claims below
-are from our dogfood loop (July 2026), described in words — the side-by-side images will
-be added to `assets/receipts/` and nothing is described here that we didn't run.
+are from our dogfood loop (July 2026), described in words. The side-by-side images promised
+here are now in [`assets/receipts/`](assets/receipts/) — they come from the October run
+above, not from this July loop, and nothing described here is something we didn't run.
 
 - **Three agents, three brands, kits only.** Three independent agents were each given only
   a decoded kit (DESIGN.md + Tailwind theme + section specs) for Linear, Mercury, and
-  Vercel — no access to the real sites — and asked to build landing pages. A separate
+  Vercel — the kit was the only design input, and no run fetched the real site — and
+  asked to build landing pages. A separate
   multimodal review judged all three on-brand and free of the standard AI tells: Linear's
   build used a single indigo as selection color only; Mercury's kept its periwinkle
   strictly on clickable elements; Vercel's came out as a Swiss-blueprint deploy dashboard,
@@ -76,7 +133,7 @@ be added to `assets/receipts/` and nothing is described here that we didn't run.
 - **The measurements are real.** The corpus behind the MCP carries type measured from the
   live DOM via computed-style probes: Linear's hero is 64px at weight **510**, tracking
   **−1.41px**, on a 300/400/510/590 weight ladder with a 128px section rhythm. Vercel
-  tracks its hero at **−3.84px**. Stripe's display weight is **300**. Across 548 measured design
+  tracks its hero at **−3.84px**. Stripe's display weight is **300**. Across 550 measured design
   systems the weight ladders run 200→900 — which is exactly why an agent's "Inter
   400/600" habit reads as slop.
 
@@ -171,7 +228,7 @@ counter-examples are welcome as PRs. Keep the voice: specific, measured, no hype
 
 ## License
 
-MIT — see [LICENSE](LICENSE). The Mozaika data corpus is not part of this repository.
+MIT — see [LICENSE](LICENSE); attribution notices are in [NOTICE](NOTICE). The Mozaika data corpus is not part of this repository.
 
 ---
 
