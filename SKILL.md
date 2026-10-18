@@ -1,6 +1,6 @@
 ---
 name: mozaika-design
-description: Use BEFORE writing or editing any UI — pages, components, landing pages, dashboards, onboarding, redesigns, "make it look better". The agent decodes a real, well-built product that already solved the screen it is about to make — measured color roles, fonts, type scale and weights, radii, section layout — locks that spec, builds to it, and screens the result against an anti-slop gate. Grounded path: the Mozaika MCP (free tier, no card) returns measured design systems; without it, the same method runs on references the user pastes.
+description: 'Use BEFORE writing or editing any UI — pages, components, landing pages, dashboards, onboarding, redesigns, "make it look better". The agent decodes a real, well-built product that already solved the screen it is about to make — measured color roles, fonts, type scale and weights, radii, section layout — locks that spec, builds to it, and screens the result against an anti-slop gate. Grounded path: the Mozaika MCP (free tier, no card) returns measured design systems; without it, the same method runs on references the user pastes.'
 ---
 
 # Mozaika Design
