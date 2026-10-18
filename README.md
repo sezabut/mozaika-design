@@ -95,6 +95,37 @@ them. It does not know *your* target, and it does not know what any particular s
 made of. Full write-up, including what the instrument cannot see:
 [mozaika.design/proof](https://mozaika.design/proof).
 
+### Five more, by a rule written before the run
+
+Two brands I picked is an objection, not evidence. So the rule was fixed first: **every
+product in the gallery with a pricing section and no free `DESIGN.md`** — the situation 514
+of 550 products are in — and every result published, including the one we lose.
+
+| product | the real canvas | with nothing | with this skill's kit |
+|---|---|---|---|
+| PostHog | `#E1D7C2` | `#EEEFE9` — off by 76 | **exact** |
+| PlanetScale | `#FAFAFA` | `#000000` — off by 750 | **exact** |
+| Clerk | `#F7F7F8` | `#FCFCFD` — off by 15 | **exact** |
+| Coda | `#FFFFFF` | `#FFFCF6` — off by 12 | **exact** |
+| Attio | `#FFFFFF` | exact | exact |
+| Gamma | `#FFFFFF` | exact | exact |
+| **Railway** | `#13111C` | `#09090B` — off by 35 | **`#201E28` — off by 38** |
+
+Six of seven exact with the kit; two of seven without it, and both of those are plain white,
+where the agent's default was already right. Narrowed to the four products whose canvas is
+*not* plain white: three of four with the kit, none without.
+
+**Railway is a loss and it stays in the table.** On canvas the kit landed three units further
+away. The same run measured accent at 1.69% against the real 1.85% with the unaided run at
+0.21%, and by eye the kit rebuilt the real structure — the $0 usage-credit card, Hobby $5 /
+Pro $20 / Enterprise Custom, the purple deploy button — while the unaided run invented a
+"Trial" tier. One axis lost, two won.
+
+What this does **not** support: not "always better", not "the agent cannot design" (unaided
+it nailed two canvases and built a credible PostHog page), and not "the measurement is
+neutral" — the numbers are distances to our own measurement, and the neutral object is the
+reference screenshot at the end of each run.
+
 ## The method
 
 1. **Frame** — Subject · Audience · Job · Concept · **Signature**, in one sentence, before any code.
